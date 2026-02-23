@@ -1,0 +1,265 @@
+.feed {
+    padding-bottom: 50px;
+}
+
+.feed-header-alt {
+    margin-bottom: 40px;
+}
+
+.header-top {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-end;
+    margin-bottom: 30px;
+}
+
+.title-group h1 {
+    font-size: 3rem;
+    color: var(--secondary-color);
+}
+
+.moon-icon {
+    font-size: 2.2rem;
+    vertical-align: middle;
+}
+
+.subtitle {
+    opacity: 0.5;
+    font-weight: 500;
+}
+
+.feed-controls {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 20px;
+    flex-wrap: wrap;
+}
+
+.category-bar {
+    display: flex;
+    gap: 12px;
+    overflow-x: auto;
+    padding-bottom: 5px;
+}
+
+.category-btn {
+    background: white;
+    padding: 10px 24px;
+    border-radius: 40px;
+    font-size: 0.9rem;
+    font-weight: 600;
+    color: var(--text-color);
+    border: 1px solid rgba(0, 0, 0, 0.05);
+    white-space: nowrap;
+}
+
+.category-btn:hover {
+    border-color: var(--primary-color);
+    background: var(--accent-color);
+}
+
+.category-btn.active {
+    background-color: var(--primary-color);
+    color: white;
+    border-color: var(--primary-color);
+    box-shadow: 0 8px 16px rgba(227, 130, 98, 0.2);
+}
+
+.search-box {
+    display: flex;
+    align-items: center;
+    padding: 10px 20px;
+    border-radius: 40px;
+    min-width: 300px;
+}
+
+.search-icon {
+    opacity: 0.3;
+    margin-right: 12px;
+}
+
+.search-box input {
+    background: none;
+    border: none;
+    outline: none;
+    width: 100%;
+    font-family: inherit;
+    font-size: 0.95rem;
+}
+
+.confession-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(340px, 1fr));
+    gap: 30px;
+}
+
+.confession-card {
+    padding: 35px;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    transition: var(--transition);
+}
+
+.confession-card:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.08);
+}
+
+.card-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.card-header-meta {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.user-badge {
+    background: var(--secondary-color);
+    color: white;
+    font-size: 0.65rem;
+    font-weight: 800;
+    padding: 2px 8px;
+    border-radius: 4px;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+}
+
+.category-tag {
+    font-size: 0.75rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    padding: 4px 12px;
+    border-radius: 20px;
+    background: var(--accent-color);
+    color: var(--primary-color);
+}
+
+.cat-secret {
+    background: #fdf2f2;
+    color: #e38262;
+}
+
+.cat-crush {
+    background: #fff5f7;
+    color: #ff4d6d;
+}
+
+.cat-happy {
+    background: #f6ffed;
+    color: #52c41a;
+}
+
+.cat-sad {
+    background: #e6f7ff;
+    color: #1890ff;
+}
+
+.cat-funny {
+    background: #fffbe6;
+    color: #faad14;
+}
+
+.date {
+    font-size: 0.8rem;
+    opacity: 0.3;
+}
+
+.whisper-text {
+    font-size: 1.25rem;
+    line-height: 1.6;
+    color: var(--secondary-color);
+    font-weight: 400;
+    overflow-wrap: break-word;
+    word-break: break-word;
+}
+
+.reaction-group {
+    display: flex;
+    gap: 15px;
+}
+
+.author-id {
+    font-size: 0.8rem;
+    font-weight: 700;
+    opacity: 0.4;
+    font-family: 'monospace', sans-serif;
+}
+
+.card-footer {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-top: 1px solid rgba(0, 0, 0, 0.04);
+    padding-top: 20px;
+}
+
+.reaction-btn {
+    background: rgba(0, 0, 0, 0.02);
+    padding: 8px 16px;
+    border-radius: 12px;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    font-size: 0.9rem;
+    font-weight: 600;
+}
+
+.reaction-btn:hover {
+    background: rgba(0, 0, 0, 0.06);
+    transform: scale(1.05);
+}
+
+.empty-wall {
+    grid-column: 1 / -1;
+    text-align: center;
+    padding: 120px 0;
+}
+
+.moon-large {
+    font-size: 4rem;
+    margin-bottom: 20px;
+}
+
+.empty-wall h3 {
+    font-size: 1.8rem;
+    margin-bottom: 10px;
+    opacity: 0.7;
+}
+
+.empty-wall p {
+    opacity: 0.4;
+}
+
+.loader-spinner {
+    width: 40px;
+    height: 40px;
+    border: 3px solid var(--accent-color);
+    border-top-color: var(--primary-color);
+    border-radius: 50%;
+    animation: spin 1s linear infinite;
+}
+
+@keyframes spin {
+    to {
+        transform: rotate(360deg);
+    }
+}
+
+@media (max-width: 768px) {
+    .header-top {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 10px;
+    }
+
+    .search-box {
+        min-width: 100%;
+    }
+}
